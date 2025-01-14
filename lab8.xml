@@ -1,0 +1,49 @@
+<tasks>
+    <task id="9">
+        <xpath>SWIAT/KRAJE/KRAJ</xpath>
+    </task>
+    <task id="11">
+        <xpath>//KRAJE/KRAJ[@KONTYNENT='k1']</xpath>
+    </task>
+    <task id="12">
+        <xpath>//KRAJE/KRAJ[@KONTYNENT=//KONTYNENTY/KONTYNENT[NAZWA='Europe']/@ID]</xpath>
+    </task>
+    <task id="15">
+        <xpath>count(//KRAJE/KRAJ[@KONTYNENT='k1'])</xpath>
+    </task>
+    <task id="17">
+        <xpath>position()</xpath>
+    </task>
+    <task id="21">
+        <xpath>"<xsl:sort select='NAZWA"'></xsl:sort>"</xpath>
+    </task>
+    <task id="28">
+        <xpath>/SWIAT/KRAJE/KRAJ</xpath>
+    </task>
+    <task id="28">
+        <xpath>/SWIAT/KRAJE/KRAJ[starts-with(NAZWA, 'A')]</xpath>
+    </task>
+    <task id="29">
+        <xpath>//KRAJ[substring(NAZWA, 1, 1) = substring(STOLICA, 1, 1)]</xpath>
+    </task>
+
+    <task id="32">
+        <xpath>//NAZWISKO</xpath>
+    </task>
+    <task id="33">
+        <xpath>//ROW[NAZWA='SYSTEMY EKSPERCKIE']/PRACOWNICY/ROW/NAZWISKO</xpath>
+    </task>
+    <task id="34">
+        <xpath>
+            count(doc('file:///C:/Users/Karol/Documents/Java projects/AdvancedDataProcessing/zesp_prac.xml')
+            //ROW[ID_ZESP='10']/PRACOWNICY/ROW/NAZWISKO)</xpath>
+    </task>
+    <task id="35">
+        <xpath>//ROW[ID_SZEFA='100']/NAZWISKO</xpath>
+    </task>
+    <task id="36">
+        <xpath>
+            sum(doc('file:///C:/Users/Karol/Documents/Java projects/AdvancedDataProcessing/zesp_prac.xml')
+            //ROW[ID_ZESP=//ROW[NAZWISKO='BRZEZINSKI']/ID_ZESP]/PLACA_POD)</xpath>
+    </task>
+</tasks>
